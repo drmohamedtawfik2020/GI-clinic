@@ -5,49 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>أ.د. محمد عبد الرؤوف توفيق | Prof. Mohamed Tawfik</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #f0f4f8;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-  }
-  .card {
-    background: #fff;
-    border-radius: 20px;
-    padding: 30px;
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    position: relative;
-  }
-  .avatar {
-    width: 160px;
-    height: 160px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid #0a66c2;
-  }
-  .avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .lang-toggle {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: #e9f2fb;
-    color: #0a66c2;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-weight: bold;
-  }
+  body { font-family: Arial, sans-serif; background: #f0f4f8; margin: 0; padding: 20px; display: flex; justify-content: center; }
+  .card { background: #fff; border-radius: 20px; padding: 30px; max-width: 800px; width: 100%; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1); position: relative; }
+  .avatar { width: 160px; height: 160px; margin: 0 auto 20px; border-radius: 50%; overflow: hidden; border: 4px solid #0a66c2; }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .lang-toggle { position: absolute; top: 20px; left: 20px; background: #e9f2fb; color: #0a66c2; border: none; padding: 8px 16px; border-radius: 12px; cursor: pointer; font-weight: bold; }
   h2 { margin: 10px 0; color: #0a66c2; }
   p { margin: 6px 0; font-size: 15px; color: #333; }
   a { color: #0a66c2; text-decoration: none; }
@@ -57,82 +19,91 @@
   .buttons { margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
   .buttons a { padding: 10px 14px; background: #0a66c2; color: #fff; border-radius: 12px; font-weight: bold; text-decoration: none; }
   .buttons a:hover { background: #095bb3; }
-  .counter { margin-top: 20px; }
+  .qr-section { margin-top:20px; text-align:center; }
+  .qr-section img { border:1px solid #ccc; border-radius:12px; padding:8px; }
+  .counter { margin-top:20px; text-align:center; }
 </style>
 </head>
 <body>
-  <div class="card">
-    <button class="lang-toggle" id="langToggle">English</button>
+<div class="card">
+  <button class="lang-toggle" id="langToggle">English</button>
 
-    <div class="avatar">
-      <img src="profile.png" alt="أ.د. محمد عبد الرؤوف توفيق">
-    </div>
-
-    <!-- بيانات بالعربي -->
-    <div class="lang-section ar">
-      <h2>أ.د. محمد عبد الرؤوف توفيق</h2>
-      <p><strong>المسمى:</strong> أستاذ الباطنة العامة وأمراض الجهاز الهضمي والكبد والمناظير</p>
-      <p><strong>الدور:</strong> استشاري الجهاز الهضمي والمناظير</p>
-      <p><strong>الجهة:</strong> Tanta University</p>
-      <p><strong>الجوال:</strong> <a href="https://wa.me/201550844075">+20 155 084 4075 💬</a></p>
-      <p><strong>داخل المستشفى:</strong> 16259 (تحويلة 2013)</p>
-      <p><strong>البريد:</strong> <a href="mailto:mrtawfik@sghgroup.net">mrtawfik@sghgroup.net</a></p>
-      <p><strong>العنوان:</strong> Alex West Compound – محور التعمير، الكيلو 23 طريق الساحل الشمالي، الإسكندرية، مصر</p>
-    </div>
-
-    <!-- بيانات بالانجليزي -->
-    <div class="lang-section en">
-      <h2>Prof. Mohamed Abd El-Raouf Tawfik</h2>
-      <p><strong>Title:</strong> Professor of Internal Medicine, Gastroenterology, Hepatology, and Endoscopy</p>
-      <p><strong>Role:</strong> GIT and Endoscopy Consultant</p>
-      <p><strong>Organization:</strong> Tanta University</p>
-      <p><strong>Mobile:</strong> <a href="https://wa.me/201550844075">+20 155 084 4075 💬</a></p>
-      <p><strong>Hospital:</strong> 16259 (Ext 2013)</p>
-      <p><strong>Email:</strong> <a href="mailto:mrtawfik@sghgroup.net">mrtawfik@sghgroup.net</a></p>
-      <p><strong>Address:</strong> Alex West Compound – Mehwer El Taamear, 23rd KM North Coast Road, Alexandria, Egypt</p>
-    </div>
-
-    <div class="buttons">
-      <a href="tel:+201550844075">📞 Call</a>
-      <a href="mailto:mrtawfik@sghgroup.net">✉️ Email</a>
-      <a href="https://www.researchgate.net" target="_blank">📖 ResearchGate</a>
-      <a href="https://share.google/h9fpIJiHgRcitC31V" target="_blank">🔗 Google Page</a>
-      <a href="https://sgheg.com/sgh/#/sgh/en/alex/doctors/1112" target="_blank">🏥 Saudi German Hospital</a>
-      <a href="https://youtube.com/@mohamedtawfik2176?si=sPmxFoHe_K4wpSqc" target="_blank">📺 YouTube</a>
-    </div>
-
-    <div class="counter">
-      <!-- HitWebCounter Code START -->
-      <a href="https://www.hitwebcounter.com/" target="_blank">
-        <img src="https://hitwebcounter.com/counter/counter.php?page=21442303&style=0001&nbdigits=5&type=page&initCount=0" 
-        title="Counters" alt="Counters" border="0" />
-      </a>                                    
-      <!-- HitWebCounter Code END -->
-    </div>
+  <div class="avatar">
+    <img src="profile.png" alt="أ.د. محمد عبد الرؤوف توفيق">
   </div>
 
-<script>
-  const toggleBtn = document.getElementById('langToggle');
-  const arSection = document.querySelector('.lang-section.ar');
-  const enSection = document.querySelector('.lang-section.en');
-  let isArabic = true;
+  <!-- بيانات بالعربي -->
+  <div class="lang-section ar">
+    <h2>أ.د. محمد عبد الرؤوف توفيق</h2>
+    <p><strong>المسمى:</strong> أستاذ الباطنة العامة وأمراض الجهاز الهضمي والكبد والمناظير</p>
+    <p><strong>الدور:</strong> استشاري الجهاز الهضمي والمناظير</p>
+    <p><strong>الجهة:</strong> Tanta University</p>
+    <p><strong>الجوال:</strong> <a href="https://wa.me/201550844075">+20 155 084 4075 💬 واتساب</a></p>
+    <p><strong>داخل المستشفى:</strong> 16259 (تحويلة 2013)</p>
+    <p><strong>البريد:</strong> <a href="mailto:mrtawfik@sghgroup.net">mrtawfik@sghgroup.net</a></p>
+    <p><strong>العنوان:</strong> Alex West Compound – محور التعمير، الكيلو 23 طريق الساحل الشمالي، الإسكندرية، مصر</p>
+  </div>
 
-  toggleBtn.addEventListener('click', () => {
-    if(isArabic){
-      arSection.style.display = 'none';
-      enSection.style.display = 'block';
-      document.documentElement.setAttribute('lang','en');
-      document.documentElement.setAttribute('dir','ltr');
-      toggleBtn.textContent = 'العربية';
-    } else {
-      enSection.style.display = 'none';
-      arSection.style.display = 'block';
-      document.documentElement.setAttribute('lang','ar');
-      document.documentElement.setAttribute('dir','rtl');
-      toggleBtn.textContent = 'English';
-    }
-    isArabic = !isArabic;
-  });
+  <!-- بيانات بالانجليزي -->
+  <div class="lang-section en">
+    <h2>Prof. Mohamed Abd El-Raouf Tawfik</h2>
+    <p><strong>Title:</strong> Professor of Internal Medicine, Gastroenterology, Hepatology, and Endoscopy</p>
+    <p><strong>Role:</strong> GIT and Endoscopy Consultant</p>
+    <p><strong>Organization:</strong> Tanta University</p>
+    <p><strong>Mobile:</strong> <a href="https://wa.me/201550844075">+20 155 084 4075 💬 WhatsApp</a></p>
+    <p><strong>Hospital:</strong> 16259 (Ext 2013)</p>
+    <p><strong>Email:</strong> <a href="mailto:mrtawfik@sghgroup.net">mrtawfik@sghgroup.net</a></p>
+    <p><strong>Address:</strong> Alex West Compound – Mehwer El Taamear, 23rd KM North Coast Road, Alexandria, Egypt</p>
+  </div>
+
+  <!-- الأزرار -->
+  <div class="buttons">
+    <a href="tel:+201550844075">📞 Call</a>
+    <a href="mailto:mrtawfik@sghgroup.net">✉️ Email</a>
+    <a href="https://www.researchgate.net" target="_blank">📖 ResearchGate</a>
+    <a href="https://share.google/h9fpIJiHgRcitC31V" target="_blank">🔗 Google Page</a>
+    <a href="https://sgheg.com/sgh/#/sgh/en/alex/doctors/1112" target="_blank">🏥 Saudi German Hospital</a>
+    <a href="https://youtube.com/@mohamedtawfik2176?si=sPmxFoHe_K4wpSqc" target="_blank">▶️ YouTube</a>
+  </div>
+
+  <!-- QR Code -->
+  <div class="qr-section">
+    <p><strong>امسح الرمز للوصول السريع للصفحة:</strong></p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://drmohamedtawfik2020.github.io/GI-clinic/&size=160x160" 
+         alt="QR Code">
+  </div>
+
+  <!-- HitWebCounter -->
+  <div class="counter">
+    <a href="https://www.hitwebcounter.com/" target="_blank">
+      <img src="https://hitwebcounter.com/counter/counter.php?page=21442303&style=0001&nbdigits=5&type=page&initCount=0" 
+           title="Visitors" alt="Visitors" border="0" />
+    </a>
+  </div>
+</div>
+
+<script>
+const toggleBtn = document.getElementById('langToggle');
+const arSection = document.querySelector('.lang-section.ar');
+const enSection = document.querySelector('.lang-section.en');
+let isArabic = true;
+
+toggleBtn.addEventListener('click', () => {
+  if(isArabic){
+    arSection.style.display = 'none';
+    enSection.style.display = 'block';
+    document.documentElement.setAttribute('lang','en');
+    document.documentElement.setAttribute('dir','ltr');
+    toggleBtn.textContent = 'العربية';
+  } else {
+    enSection.style.display = 'none';
+    arSection.style.display = 'block';
+    document.documentElement.setAttribute('lang','ar');
+    document.documentElement.setAttribute('dir','rtl');
+    toggleBtn.textContent = 'English';
+  }
+  isArabic = !isArabic;
+});
 </script>
 </body>
 </html>
