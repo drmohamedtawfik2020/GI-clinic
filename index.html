@@ -12,7 +12,17 @@
   body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Arial;background:var(--bg);color:var(--text);}
   .wrap{max-width:820px;margin:24px auto;padding:18px;}
   .card{background:var(--card);border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,.08);padding:22px;position:relative;overflow:hidden}
-  .avatar{width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,#eaf4ff,#ffffff);display:flex;align-items:center;justify-content:center;margin:8px auto 12px;font-weight:800;font-size:36px;color:var(--brand);border:4px solid #fff;box-shadow:0 6px 18px rgba(10,102,194,.08)}
+  /* التعديل: نمط جديد لعرض الصورة بدلاً من الأحرف الأولى */
+  .avatar{
+    width:140px;
+    height:140px;
+    border-radius:50%; /* لجعل الصورة دائرية */
+    margin:8px auto 12px;
+    border:4px solid #fff;
+    box-shadow:0 6px 18px rgba(10,102,194,.08);
+    object-fit: cover; /* لضمان تغطية الصورة للمنطقة بشكل جيد */
+    display: block; /* لضمان تمركز الصورة */
+  }
   .name{text-align:center;font-size:22px;font-weight:800;margin:6px 0;}
   .title{text-align:center;color:var(--muted);margin:0 0 12px;font-size:15px;line-height:1.4}
   .btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:14px}
@@ -28,48 +38,7 @@
   <div class="wrap">
     <div class="card" id="card">
       <button class="lang-toggle" onclick="toggleLang()">English</button>
-      <div class="avatar" id="avatarInitials">
-  <img src="profile.jpg" alt="أ.د. محمد توفيق" style="width:100%;height:100%;border-radius:50%;object-fit:cover">
-      </div>
-      <h1 class="name" id="name">أ.د. محمد عبد الرؤوف توفيق</h1>
-      <p class="title" id="title">أستاذ واستشاري أمراض الجهاز الهضمي والكبد والمناظير – كلية الطب، جامعة طنطا</p>
-      <div class="btns" id="actions">
-        <a class="btn" href="tel:01550844075" id="callBtn">📞 اتصال</a>
-        <a class="btn" href="https://wa.me/201550844075" id="waBtn" target="_blank" rel="noopener">💬 واتساب</a>
-        <a class="btn" href="mailto:M_atawfik@hotmail.com" id="mailBtn">✉️ بريد إلكتروني</a>
-        <a class="btn light" href="https://share.google/h9fpIJiHgRcitC31V" id="mapBtn" target="_blank" rel="noopener">📍 موقع العيادة</a>
-      </div>
-      <div class="qr" id="qrWrap">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://share.google/h9fpIJiHgRcitC31V" alt="QR Code">
-        <div class="notes" id="qrNote">مسح QR للوصول إلى موقع العيادة</div>
-      </div>
-    </div>
-  </div>
-<script>
-  let current = 'ar';
-  function toggleLang(){
-    const name = document.getElementById('name');
-    const title = document.getElementById('title');
-    const btn = document.querySelector('.lang-toggle');
-    const avatar = document.getElementById('avatarInitials');
-    if(current==='ar'){
-      name.innerText = 'Prof. Dr. Mohamed Abd El-Raouf Tawfik';
-      title.innerText = 'Professor & Consultant of Gastroenterology, Hepatology and Endoscopy – Faculty of Medicine, Tanta University';
-      btn.innerText = 'العربية';
-      document.documentElement.lang = 'en';
-      document.documentElement.dir = 'ltr';
-      avatar.innerText = 'M A R';
-      current = 'en';
-    } else {
-      name.innerText = 'أ.د. محمد عبد الرؤوف توفيق';
-      title.innerText = 'أستاذ واستشاري أمراض الجهاز الهضمي والكبد والمناظير – كلية الطب، جامعة طنطا';
-      btn.innerText = 'English';
-      document.documentElement.lang = 'ar';
-      document.documentElement.dir = 'rtl';
-      avatar.innerText = 'أ.د. م';
-      current = 'ar';
-    }
-  }
-</script>
-</body>
-</html>
+      
+      <img 
+        class="avatar" 
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA4oAAAJZCAMAAAAS4pE8AAABhFBMVEUAAAD///9kZGRQUFBeXl5aWlpkZGQ4ODhISEhpaWmAgIBTU1Nsbm7Q0NCBgYFvb29ubm5eXl5gYGChoaGJiYmvr6/W1tbe3t7X19fR0dGlpaWhoaHLy8vIyMjMzMyDg4Onp6fY2Nja2trs7OzFxcXBwcH09PTZ2dnl5eXm5ubT09Ovr6+Tk5O+vr7j4+Pc3Nynp6fOzs7Hx8fDw8PAwMCEhISnp6fJyclzc3PIyMjPz8/MzMzExMTR0dHMzMzKysrMzMyhoaGnp6fa2tqnp6fl5eXd3d3Pz8/T09PV1dXW1tbZ2dnQ0NDR0dHHy8vY2Nja2tra2tqnp6fKysrPz8/R0dHd3d3g4OCnp6fNzc3Nzc3S0tLU1NTV1dXW1tbY2Nja2trb29vf39/n5+fo6Ojn5+fn5+fo6Ojp6eno6Ojo6Ojp6eno6Ojr6+vq6urr6+vs7Ozt7e3w8PDz8/P09PT19fX4+Pj6+vr7+/v8/Pz9/f3+/v7////A2p9mAAAAAWJLR0QAwA1qWwAAAPN0lEQVR42u3dDbgjBfQAYG3V1n0oW8u2bcvkXjP8N6U2VbZt2/b9f4gQQEAgMIEI0+B5A/QjE0g+qJm9hN9D7wL/dE3/p0d/5z3oKz/89C+nC70C+l8Bf6fV6j6t1XlWv4V1vQn69/0d+vvd36D/f/+D/v73B3p52f7r78/S959+/8P2/mP3B+fvd3/n/v1v2f3B3L9Qe/NqTz79vofcO+z+IL4/D7/Ff/8X998+8B+zP1i8W9O+XNuvQ3N/e+/N1n09f/uP3/+/Hn5/O/j/N/j/v//A/+/v/6D//nF6/f9e+8f2C9W3S/5v8H/P4/8L+vvtN1rvuP/J4/z//2778+P/X8F/L+j/S/j/t/d/z+v//0H//wL+X/7/967Xf7S2X3T9/v7D+vvtN9jf/7f+3b7/9o/Xf//3f3//+v/F//4D/H/3/3/O/49T/wP5v7/b/f/Nf/+3u//zG3//79z+/8P+X+H/d/n/l/v/t/v/y///f7H/L/7/l/v/zX/v07f/qj359P/03v32T377p3f/j//6V/P/+v+7n/4Vp//nJ/u/V/P/m/t/v/v/y/2/z/v/v/z/z/3/v//C/r/1/6/7//v/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h/d/+P7f/h
