@@ -1,108 +1,155 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>كارت شخصي — أ.د. محمد عبد الرؤوف توفيق</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كارت شخصي | أ.د. محمد عبد الرؤوف توفيق</title>
 
-  <!-- معاينة عند المشاركة -->
-  <meta property="og:title" content="أ.د. محمد عبد الرؤوف توفيق — كارت شخصي">
-  <meta property="og:description" content="أستاذ واستشاري أمراض الجهاز الهضمي والكبد والمناظير - جامعة طنطا">
+  <!-- معاينة المشاركة -->
+  <meta property="og:title" content="أ.د. محمد عبد الرؤوف توفيق | Prof. Dr. Mohamed Abd El-Raouf Tawfik">
+  <meta property="og:description" content="أستاذ أمراض الجهاز الهضمي والكبد والمناظير - جامعة طنطا">
   <meta property="og:image" content="profile.jpg">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#0a66c2">
+  <meta property="og:type" content="profile">
 
   <style>
+    :root {
+      --brand: #0a66c2;
+      --bg: #f0f4f8;
+      --text: #1e293b;
+      --muted: #64748b;
+      --radius: 20px;
+      --shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
     body {
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-      background: #f0f4f8;
       margin: 0;
-      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      padding: 20px;
     }
     .card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
-      max-width: 380px;
-      text-align: center;
+      background: white;
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      max-width: 420px;
       width: 100%;
+      text-align: center;
+      position: relative;
+      transition: 0.3s ease;
+    }
+    .lang-toggle {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: #eaf4ff;
+      color: var(--brand);
+      border: none;
+      padding: 6px 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
     }
     .avatar {
-      width: 160px;
-      height: 160px;
+      width: 150px;
+      height: 150px;
       margin: auto;
       border-radius: 50%;
       overflow: hidden;
-      border: 5px solid #0a66c2;
+      border: 5px solid var(--brand);
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
     h1 {
-      margin: 15px 0 8px;
-      font-size: 20px;
-      color: #0a66c2;
+      margin: 16px 0 8px;
+      font-size: 22px;
+      color: var(--text);
     }
     .subtitle {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 12px;
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      line-height: 1.5;
     }
-    .contact {
-      font-size: 14px;
-      margin-bottom: 15px;
+    .icons {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    .btns {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
     .btn {
-      display: block;
-      margin: 8px auto;
-      padding: 10px 18px;
-      border-radius: 25px;
-      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--brand);
+      color: white;
+      padding: 12px;
+      border-radius: 14px;
       text-decoration: none;
-      color: #fff;
-      background: #0a66c2;
-      box-shadow: 0 4px 10px rgba(10,102,194,0.2);
+      font-weight: 600;
+      font-size: 15px;
       transition: 0.2s;
     }
     .btn:hover { background: #084a91; }
-    .btn.whatsapp {
-      background: #25d366;
-      box-shadow: 0 4px 10px rgba(37,211,102,0.3);
-    }
+    .btn.whatsapp { background: #25d366; }
     .btn.whatsapp:hover { background: #1da851; }
+    .btn.email { background: #64748b; }
+    .btn.email:hover { background: #475569; }
   </style>
 </head>
 <body>
-  <div class="card">
+  <div class="card" id="card">
+    <button class="lang-toggle" id="langToggle">English</button>
+    
     <div class="avatar">
-      <img src="profile.jpg" alt="أ.د. محمد عبد الرؤوف توفيق">
-    </div>
-    <h1>أ.د. محمد عبد الرؤوف توفيق</h1>
-    <div class="subtitle">
-      أستاذ واستشاري أمراض الجهاز الهضمي والكبد والمناظير<br>
-      كلية الطب — جامعة طنطا
-    </div>
-    <div class="contact">
-      📞 01550844075<br>
-      ✉️ M_atawfik@hotmail.com
+      <img src="profile.png" alt="صورة شخصية">
     </div>
 
-    <!-- زر واتساب -->
-    <a class="btn whatsapp" href="https://wa.me/201550844075" target="_blank">💬 تواصل عبر واتساب</a>
-    
-    <!-- زر حفظ جهة الاتصال -->
-    <a class="btn" download="contact.vcf"
-       href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AN:%D8%AA%D9%88%D9%81%D9%8A%D9%82;%D9%85%D8%AD%D9%85%D8%AF%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%B1%D8%A4%D9%88%D9%81;;%D8%A3.%D8%AF.;%0AFN:%D8%A3.%D8%AF.%20%D9%85%D8%AD%D9%85%D8%AF%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%B1%D8%A4%D9%88%D9%81%20%D8%AA%D9%88%D9%81%D9%8A%D9%82%0AORG:%D8%AC%D8%A7%D9%85%D8%B9%D8%A9%20%D8%B7%D9%86%D8%B7%D8%A7%20-%20%D9%83%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B7%D8%A8%0ATITLE:%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D9%88%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A%20%D8%A3%D9%85%D8%B1%D8%A7%D8%B6%20%D8%A7%D9%84%D8%AC%D9%87%D8%A7%D8%B2%20%D8%A7%D9%84%D9%87%D8%B6%D9%85%D9%8A%20%D9%88%D8%A7%D9%84%D9%83%D8%A8%D8%AF%20%D9%88%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B8%D9%8A%D8%B1%0ATEL;TYPE=work,voice:%2B201550844075%0AEMAIL;TYPE=internet:M_atawfik@hotmail.com%0AEND:VCARD">
-      💾 حفظ جهة الاتصال
-    </a>
+    <h1 id="name">أ.د. محمد عبد الرؤوف توفيق</h1>
+    <div class="subtitle" id="title">
+      أستاذ واستشاري أمراض الجهاز الهضمي والكبد والمناظير<br>كلية الطب – جامعة طنطا
+    </div>
+
+    <div class="icons">🩺🔬🍽️🫀🧬</div>
+
+    <div class="btns">
+      <a href="tel:01550844075" class="btn">📞 اتصال</a>
+      <a href="https://wa.me/201550844075" target="_blank" class="btn whatsapp">💬 واتساب</a>
+      <a href="mailto:M_atawfik@hotmail.com" class="btn email">✉️ بريد إلكتروني</a>
+    </div>
   </div>
+
+  <script>
+    let isArabic = true;
+    document.getElementById("langToggle").onclick = () => {
+      if (isArabic) {
+        document.getElementById("name").textContent = "Prof. Dr. Mohamed Abd El-Raouf Tawfik";
+        document.getElementById("title").innerHTML = "Professor & Consultant of Gastroenterology, Hepatology & Endoscopy<br>Faculty of Medicine – Tanta University";
+        document.querySelector(".btns").children[0].textContent = "📞 Call";
+        document.querySelector(".btns").children[1].textContent = "💬 WhatsApp";
+        document.querySelector(".btns").children[2].textContent = "✉️ Email";
+        document.getElementById("langToggle").textContent = "العربية";
+        document.documentElement.lang = "en";
+        document.documentElement.dir = "ltr";
+      } else {
+        document.getElementById("name").textContent = "أ.د. محمد عبد الرؤوف توفيق";
+        document.getElementById("title").innerHTML = "أستاذ واستشاري أمراض الجهاز الهضمي والكبد والمناظير<br>كلية الطب – جامعة طنطا";
+        document.querySelector(".btns").children[0].textContent = "📞 اتصال";
+        document.querySelector(".btns").children[1].textContent = "💬 واتساب";
+        document.querySelector(".btns").children[2].textContent = "✉️ بريد إلكتروني";
+        document.getElementById("langToggle").textContent = "English";
+        document.documentElement.lang = "ar";
+        document.documentElement.dir = "rtl";
+      }
+      isArabic = !isArabic;
+    }
+  </script>
 </body>
 </html>
