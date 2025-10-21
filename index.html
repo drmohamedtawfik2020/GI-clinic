@@ -4,56 +4,65 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>الأستاذ الدكتور محمد عبد الرؤوف توفيق - مستشفى السعودي الألماني بالإسكندرية</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
   body {
     font-family: 'Cairo', sans-serif;
-    background-color: #f8f9fa;
-    text-align: center;
-    direction: rtl;
+    background: linear-gradient(to bottom, #e9f2ff, #ffffff);
     margin: 0;
     padding: 0;
+    text-align: center;
   }
+
   .card {
-    background: white;
+    background-color: #fff;
     margin: 50px auto;
-    padding: 25px;
+    padding: 30px 20px;
     width: 90%;
-    max-width: 550px;
+    max-width: 500px;
     border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   }
-  img.profile {
+
+  .profile {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
+    border: 3px solid #004aad;
   }
+
   h1 {
     font-size: 22px;
     color: #004aad;
-    margin-bottom: 5px;
+    margin: 15px 0 5px;
   }
+
   h2 {
-    font-size: 18px;
+    font-size: 17px;
     color: #333;
     margin-bottom: 15px;
+    line-height: 1.6;
   }
+
   p {
-    color: #555;
+    color: #444;
     font-size: 16px;
     line-height: 1.7;
+    margin: 8px 0;
   }
-  .info {
-    margin-top: 15px;
-    text-align: right;
-    padding-right: 10px;
-  }
+
   .info strong {
     color: #004aad;
   }
+
   .whatsapp {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     background-color: #25d366;
     color: white;
     padding: 10px 15px;
@@ -61,58 +70,81 @@
     text-decoration: none;
     font-weight: bold;
     margin-top: 10px;
+    transition: 0.3s;
   }
+
+  .whatsapp:hover {
+    background-color: #1eb45f;
+  }
+
   .whatsapp img {
     width: 22px;
+    height: 22px;
     margin-left: 8px;
   }
+
   .qr {
-    margin-top: 20px;
+    margin-top: 25px;
   }
+
   .qr img {
     width: 140px;
+    height: 140px;
   }
+
   .counter {
     margin-top: 25px;
-    color: #777;
+    color: #666;
     font-size: 15px;
+  }
+
+  footer {
+    margin-top: 40px;
+    font-size: 13px;
+    color: #777;
   }
 </style>
 </head>
 <body>
 
-<div class="card">
-  <img src="profile.jpg" alt="Profile" class="profile">
-  <h1>الأستاذ الدكتور محمد عبد الرؤوف توفيق</h1>
-  <h2>أستاذ الأمراض الباطنة والجهاز الهضمي والكبد والمناظير بكلية الطب جامعة طنطا</h2>
-  <p><strong>الجهة:</strong> مستشفى السعودي الألماني بالإسكندرية</p>
-  <p><strong>العنوان:</strong> عيادة الجهاز الهضمي والكبد والمناظير بمستشفى السعودي الألماني بالإسكندرية - الكيلو 23 طريق إسكندرية مطروح الساحلي - كمبوند أليكس ويست</p>
-  
-  <div class="info">
-    <strong>الجوال:</strong> 
-    <a href="https://wa.me/201550844075" class="whatsapp">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="واتساب">
-      01550844075
-    </a>
+  <div class="card">
+    <img src="profile.jpg" alt="صورة الطبيب" class="profile">
+    <h1>الأستاذ الدكتور محمد عبد الرؤوف توفيق</h1>
+    <h2>أستاذ الأمراض الباطنة والجهاز الهضمي والكبد والمناظير<br>بكلية الطب جامعة طنطا</h2>
+
+    <p><strong>الجهة:</strong> مستشفى السعودي الألماني بالإسكندرية</p>
+
+    <p><strong>العنوان:</strong> عيادة الجهاز الهضمي والكبد والمناظير بمستشفى السعودي الألماني بالإسكندرية - الكيلو 23 طريق إسكندرية مطروح الساحلي - كمبوند أليكس ويست</p>
+
+    <div class="info">
+      <strong>الجوال:</strong><br>
+      <a href="https://wa.me/201550844075" class="whatsapp" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="واتساب">
+        01550844075
+      </a>
+    </div>
+
+    <div class="qr">
+      <p><strong>الموقع الإلكتروني:</strong></p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://drmohamedtawfik2020.github.io/GI-clinic/&size=150x150" alt="QR Code">
+    </div>
+
+    <div class="counter">
+      عدد الزوار: <span id="visitorCount">0</span>
+    </div>
   </div>
 
-  <div class="qr">
-    <p><strong>الموقع الإلكتروني:</strong></p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://drmohamedtawfik2020.github.io/GI-clinic/&size=150x150" alt="QR Code">
-  </div>
+  <footer>
+    © 2025 - جميع الحقوق محفوظة للأستاذ الدكتور محمد عبد الرؤوف توفيق
+  </footer>
 
-  <div class="counter">
-    <p>عدد الزوار: <span id="visitorCount">0</span></p>
-  </div>
-</div>
-
-<script>
-  // عداد الزوار المحلي
-  let count = localStorage.getItem("visits") || 0;
-  count++;
-  localStorage.setItem("visits", count);
-  document.getElementById("visitorCount").innerText = count;
-</script>
+  <script>
+    // عداد الزوار المحلي
+    let count = localStorage.getItem("visits") || 0;
+    count++;
+    localStorage.setItem("visits", count);
+    document.getElementById("visitorCount").innerText = count;
+  </script>
 
 </body>
 </html>
