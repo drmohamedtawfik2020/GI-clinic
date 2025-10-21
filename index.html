@@ -1,109 +1,153 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>أ.د. محمد عبد الرؤوف توفيق | Prof. Mohamed Tawfik</title>
-<style>
-  body { font-family: Arial, sans-serif; background: #f0f4f8; margin: 0; padding: 20px; display: flex; justify-content: center; }
-  .card { background: #fff; border-radius: 20px; padding: 30px; max-width: 800px; width: 100%; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1); position: relative; }
-  .avatar { width: 160px; height: 160px; margin: 0 auto 20px; border-radius: 50%; overflow: hidden; border: 4px solid #0a66c2; }
-  .avatar img { width: 100%; height: 100%; object-fit: cover; }
-  .lang-toggle { position: absolute; top: 20px; left: 20px; background: #e9f2fb; color: #0a66c2; border: none; padding: 8px 16px; border-radius: 12px; cursor: pointer; font-weight: bold; }
-  h2 { margin: 10px 0; color: #0a66c2; }
-  p { margin: 6px 0; font-size: 15px; color: #333; }
-  a { color: #0a66c2; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .lang-section { display: block; }
-  .en { display: none; }
-  .buttons { margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-  .buttons a { padding: 10px 14px; background: #0a66c2; color: #fff; border-radius: 12px; font-weight: bold; text-decoration: none; }
-  .buttons a:hover { background: #095bb3; }
-  .qr-section { margin-top:20px; text-align:center; }
-  .qr-section img { border:1px solid #ccc; border-radius:12px; padding:8px; }
-  .counter { margin-top:20px; text-align:center; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أ.د. محمد عبد الرؤوف توفيق - عيادة أمراض الجهاز الهضمي والكبد - مستشفى السعودي الألماني بالإسكندرية</title>
+  <style>
+    body {
+      font-family: "Tajawal", sans-serif;
+      background-color: #f5f8fa;
+      color: #222;
+      text-align: center;
+      line-height: 1.8;
+      direction: rtl;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0077b6;
+      color: white;
+      padding: 20px 10px;
+      border-bottom: 4px solid #023e8a;
+    }
+
+    h1 { font-size: 26px; margin-bottom: 5px; }
+    h2 { font-size: 20px; color: #023e8a; margin-top: 25px; }
+
+    a {
+      color: #0077b6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hospital-logo {
+      width: 24px;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+
+    .social-icons img {
+      width: 36px;
+      height: 36px;
+      margin: 8px;
+      transition: transform 0.2s;
+    }
+
+    .social-icons img:hover { transform: scale(1.15); }
+
+    .contact {
+      background-color: #e8f1f5;
+      padding: 20px;
+      border-top: 2px solid #90e0ef;
+      margin-top: 25px;
+    }
+
+    footer {
+      background-color: #0077b6;
+      color: white;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 32px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+      z-index: 100;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover { transform: scale(1.1); }
+
+    .whatsapp-float img {
+      margin-top: 12px;
+      width: 35px;
+      height: 35px;
+    }
+
+    .qr-code { margin-top: 20px; }
+  </style>
 </head>
 <body>
-<div class="card">
-  <button class="lang-toggle" id="langToggle">English</button>
 
-  <div class="avatar">
-    <img src="profile.png" alt="أ.د. محمد عبد الرؤوف توفيق">
-  </div>
+  <header>
+    <h1>الأستاذ الدكتور محمد عبد الرؤوف توفيق</h1>
+    <p>استشاري أمراض الجهاز الهضمي والكبد والمناظير</p>
+    <p>
+      <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" class="hospital-logo" alt="Hospital">
+      مستشفى السعودي الألماني بالإسكندرية
+    </p>
+  </header>
 
-  <!-- بيانات بالعربي -->
-  <div class="lang-section ar">
-    <h2>أ.د. محمد عبد الرؤوف توفيق</h2>
-    <p><strong>المسمى:</strong> أستاذ الباطنة العامة وأمراض الجهاز الهضمي والكبد والمناظير</p>
-    <p><strong>الدور:</strong> استشاري الجهاز الهضمي والمناظير</p>
-    <p><strong>الجهة:</strong> Tanta University</p>
-    <p><strong>الجوال:</strong> <a href="https://wa.me/201550844075">+20 155 084 4075 💬 واتساب</a></p>
-    <p><strong>داخل المستشفى:</strong> 16259 (تحويلة 2013)</p>
-    <p><strong>البريد:</strong> <a href="mailto:mrtawfik@sghgroup.net">mrtawfik@sghgroup.net</a></p>
-    <p><strong>العنوان:</strong> Alex West Compound – محور التعمير، الكيلو 23 طريق الساحل الشمالي، الإسكندرية، مصر</p>
-  </div>
+  <section>
+    <h2>روابط هامة</h2>
+    <div class="social-icons">
+      <a href="https://share.google/h9fpIJiHgRcitC31V" target="_blank" title="Google Page">
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google">
+      </a>
+      <a href="https://sgheg.com/sgh/#/sgh/en/alex/doctors/1112" target="_blank" title="Saudi German Hospital">
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Hospital">
+      </a>
+      <a href="https://www.researchgate.net/?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImxvZ2luIiwicGFnZSI6ImxvZ2luIn19" target="_blank" title="ResearchGate">
+        <img src="https://cdn-icons-png.flaticon.com/512/5977/5977590.png" alt="ResearchGate">
+      </a>
+      <a href="https://youtube.com/@mohamedtawfik2176?si=sPmxFoHe_K4wpSqc" target="_blank" title="YouTube Channel">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+      </a>
+    </div>
+  </section>
 
-  <!-- بيانات بالانجليزي -->
-  <div class="lang-section en">
-    <h2>Prof. Mohamed Abd El-Raouf Tawfik</h2>
-    <p><strong>Title:</strong> Professor of Internal Medicine, Gastroenterology, Hepatology, and Endoscopy</p>
-    <p><strong>Role:</strong> GIT and Endoscopy Consultant</p>
-    <p><strong>Organization:</strong> Tanta University</p>
-    <p><strong>Mobile:</strong> <a href="https://wa.me/201550844075">+20 155 084 4075 💬 WhatsApp</a></p>
-    <p><strong>Hospital:</strong> 16259 (Ext 2013)</p>
-    <p><strong>Email:</strong> <a href="mailto:mrtawfik@sghgroup.net">mrtawfik@sghgroup.net</a></p>
-    <p><strong>Address:</strong> Alex West Compound – Mehwer El Taamear, 23rd KM North Coast Road, Alexandria, Egypt</p>
-  </div>
+  <section class="contact">
+    <h2>وسائل التواصل</h2>
+    <p>📞 الهاتف: <strong>+20 155 084 4075</strong></p>
+    <p>📍 العنوان: مستشفى السعودي الألماني - الإسكندرية</p>
+    <p>✉️ البريد الإلكتروني: <a href="mailto:drmohamedtawfik2020@gmail.com">drmohamedtawfik2020@gmail.com</a></p>
+  </section>
 
-  <!-- الأزرار -->
-  <div class="buttons">
-    <a href="tel:+201550844075">📞 Call</a>
-    <a href="mailto:mrtawfik@sghgroup.net">✉️ Email</a>
-    <a href="https://www.researchgate.net" target="_blank">📖 ResearchGate</a>
-    <a href="https://share.google/h9fpIJiHgRcitC31V" target="_blank">🔗 Google Page</a>
-    <a href="https://sgheg.com/sgh/#/sgh/en/alex/doctors/1112" target="_blank">🏥 Saudi German Hospital</a>
-    <a href="https://youtube.com/@mohamedtawfik2176?si=sPmxFoHe_K4wpSqc" target="_blank">▶️ YouTube</a>
-  </div>
+  <section class="qr-code">
+    <h2>📱 رمز الاستجابة السريع (QR)</h2>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://drmohamedtawfik2020.github.io/GI-clinic/" alt="QR Code">
+    <p>امسح الرمز لزيارة الصفحة مباشرة</p>
+  </section>
 
-  <!-- QR Code -->
-  <div class="qr-section">
-    <p><strong>امسح الرمز للوصول السريع للصفحة:</strong></p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://drmohamedtawfik2020.github.io/GI-clinic/&size=160x160" 
-         alt="QR Code">
-  </div>
-
-  <!-- HitWebCounter -->
-  <div class="counter">
+  <!-- hitwebcounter Code START -->
+  <div style="margin-top:20px;">
     <a href="https://www.hitwebcounter.com/" target="_blank">
-      <img src="https://hitwebcounter.com/counter/counter.php?page=21442303&style=0001&nbdigits=5&type=page&initCount=0" 
-           title="Visitors" alt="Visitors" border="0" />
+      <img src="https://hitwebcounter.com/counter/counter.php?page=21442303&style=0001&nbdigits=5&type=page&initCount=0"
+           title="Counter" alt="Counter" border="0">
     </a>
   </div>
-</div>
+  <!-- hitwebcounter Code END -->
 
-<script>
-const toggleBtn = document.getElementById('langToggle');
-const arSection = document.querySelector('.lang-section.ar');
-const enSection = document.querySelector('.lang-section.en');
-let isArabic = true;
+  <footer>
+    <p>جميع الحقوق محفوظة © أ.د. محمد عبد الرؤوف توفيق</p>
+  </footer>
 
-toggleBtn.addEventListener('click', () => {
-  if(isArabic){
-    arSection.style.display = 'none';
-    enSection.style.display = 'block';
-    document.documentElement.setAttribute('lang','en');
-    document.documentElement.setAttribute('dir','ltr');
-    toggleBtn.textContent = 'العربية';
-  } else {
-    enSection.style.display = 'none';
-    arSection.style.display = 'block';
-    document.documentElement.setAttribute('lang','ar');
-    document.documentElement.setAttribute('dir','rtl');
-    toggleBtn.textContent = 'English';
-  }
-  isArabic = !isArabic;
-});
-</script>
+  <!-- زر واتساب عائم -->
+  <a href="https://wa.me/201550844075?text=مرحبًا%20د.%20محمد،%20أود%20حجز%20موعد%20أو%20استشارة."
+     class="whatsapp-float" target="_blank" title="تواصل عبر واتساب">
+     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+
 </body>
 </html>
