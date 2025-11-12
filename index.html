@@ -20,11 +20,11 @@
   .buttons a { padding:10px 14px; background:#0a66c2; color:#fff; border-radius:12px; font-weight:bold; text-decoration:none; display:flex; align-items:center; gap:6px;}
   .buttons a:hover { background:#095bb3;}
   .buttons img { width:20px; height:20px; vertical-align:middle;}
-  
+
   /* زر الحجز بالعيادة الآن */
   .highlight-btn {
-    background: linear-gradient(135deg, #f5b300, #ffcc33);
-    color: #000;
+    background: linear-gradient(135deg, #28a745, #71d96d); /* أخضر */
+    color: #fff;
     font-weight: bold;
     padding:14px 26px;
     border-radius:16px;
@@ -35,12 +35,36 @@
     gap:8px;
     box-shadow:0 4px 12px rgba(0,0,0,0.15);
     animation: pulse 1.5s infinite;
+    margin-bottom:15px; /* فاصل */
   }
   .highlight-btn::before {
-    content: "🩺";
+    content: "🎧"; /* سماعة */
     display:inline-block;
     animation: bounce 1.5s infinite;
   }
+
+  /* زر الحجز عبر مركز الاتصال */
+  .call-center-btn {
+    background: linear-gradient(135deg, #0a66c2, #3d8cf0);
+    color: #fff;
+    font-weight: bold;
+    padding:14px 26px;
+    border-radius:16px;
+    text-decoration:none;
+    font-size:17px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    animation: pulse 1.5s infinite;
+    margin-bottom:15px;
+  }
+  .call-center-btn::before {
+    content: "☎️"; /* أيقونة كول سنتر */
+    display:inline-block;
+    animation: bounce 1.5s infinite;
+  }
+
   @keyframes pulse {
     0%,100% { transform: scale(1);}
     50% { transform: scale(1.05);}
@@ -110,7 +134,7 @@
 <a class="highlight-btn" href="https://sgheg.com/sgh/#/sgh/ar/alex/doctors/1112" target="_blank">احجز كشفك بالعيادة الآن عن طريق الموقع</a>
 
 <!-- زر الحجز عبر مركز الاتصال -->
-<a class="highlight-btn" href="tel:16259" target="_blank">احجز عن طريق مركز الاتصال 📞</a>
+<a class="call-center-btn" href="tel:16259" target="_blank">احجز عن طريق مركز الاتصال</a>
 
 <!-- زر تحميل الكتاب -->
 <a class="download-book" href="https://payhip.com/b/eMPZ3" target="_blank">📘 تحميل كتابي "المسموح والممنوع في أمراض الجهاز الهضمي"</a>
@@ -174,4 +198,4 @@
   });
 </script>
 </body>
-</html>
+        </html>
